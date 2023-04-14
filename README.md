@@ -30,14 +30,14 @@ library(cubature)
 
 library(survival) 
 
-data(data1)
+load(file="data1.RData")
 
 study_time <- max(data1[,1])+1
 
 res <- survival.QC1(surv_time=data1[,1], ind=data1[,2], study_time)
 
 
-data(data2)
+load(file="data2.RData")
 
 res <- survival.QC2(surv_time=data2[,1], arr_time=data2[,2])
 
